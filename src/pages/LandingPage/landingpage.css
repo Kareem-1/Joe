@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 2%;
+}
+
+.header p {
+    color: rgb(170, 167, 167);
+}
+
+.ellipse1-container {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.ellipse1-container::before,
+.ellipse1-container::after {
+    content: "";
+    position: absolute;
+    width: 750px;
+    height: 700px;
+    background: linear-gradient(to top, #d7d7d7, #FFFFFF);
+    border-radius: 50%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.ellipse1-container::before {
+    bottom: -200px;
+    left: -180px;
+}
+
+.ellipse1-container::after {
+    background: linear-gradient(to bottom, #e8e6e6, #FFFFFF);
+    top: -200px;
+    right: -180px;
+}
+
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5rem;
+    gap: 10rem;
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: 1rem;
+    width: 50%;
+}
+
+.hero-text-container h1 {
+    font-size: 90px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.hero-text-container p {
+    font-size: 23px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.hero-button-container {
+    padding-left: 1rem;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin-top: 10%;
+    color: white;
+}
+
+.hero-button-container-Link {
+    width: 50%;
+    padding: 1rem;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+}
+
+.hero-button-container-button {
+    width: 100%;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+}
+
+.hero-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: right;
+    align-items: right;
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-radius: 18px;
+    padding: 5px;
+    gap: 3%;
+}
+
+.icon {
+    display: flex;
+    background-color: #EEEEEE;
+    align-items: center;
+    justify-content: right;
+    border-radius: 18px;
+    padding: 8px;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
