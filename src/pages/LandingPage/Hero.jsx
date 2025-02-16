@@ -7,11 +7,12 @@ export default function HeroSection() {
         <div className="hero-container">
             <div className="hero-text-container">
                 <h1>
-                    Quiter Clinic Happier Dentists
+                    <p>Quieter Clinic</p>
+                    <p>Happier Dentists</p>
                 </h1>
                 <p>Reduce compressor noise to below 40 dB for a calm, patient-friendly environment. Silence that enhances care and comfort.</p>
                 <div className='hero-button-container'>
-                    <Link to={'/shop'} className='hero-button-container-Link' style={{ textDecoration: 'none', color:'white' }}>
+                    <Link to={'/shop'} className='hero-button-container-Link' style={{ textDecoration: 'none', color: 'white' }}>
                         <button className='hero-button-container-button'>
                             Order Yours Now
                         </button>
@@ -20,7 +21,7 @@ export default function HeroSection() {
             </div>
             <div className="hero-image-container">
                 <div>
-                    <img src={productimage} width={390} />
+                    <img src={productimage} width={450} />
                 </div>
                 <div className='icons-container'>
                     <div >

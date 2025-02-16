@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-left: 3%;
-    padding-right: 2%;
+    padding-right: 10%;
+    color: #292929;
 }
 
 .header p {
@@ -46,7 +49,6 @@
     display: flex;
     flex-direction: row;
     padding-left: 5rem;
-    gap: 10rem;
 }
 
 .hero-text-container {
@@ -54,35 +56,44 @@
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    gap: 1rem;
     width: 50%;
+    padding-left: 10px;
 }
 
-.hero-text-container h1 {
+h1,p {
+    padding: 0;
+    margin: 0;
+}
+.hero-text-container h1{
+    margin-bottom: 0.5rem;
+}
+.hero-text-container h1 p {
+    min-width: 100%;
     font-size: 90px;
-    margin-bottom: 0;
     text-align: left;
+    font-weight: 800;
 }
 
 .hero-text-container p {
     font-size: 23px;
     margin-top: 0;
     text-align: left;
+    margin-right: 100px;
 }
 
 .hero-button-container {
-    padding-left: 1rem;
+    padding-left: 5rem;
     display: flex;
     justify-content: left;
     width: 100%;
     margin-top: 10%;
     color: white;
+    margin-top: 170px;
 }
 
 .hero-button-container-Link {
     width: 50%;
-    padding: 1rem;
-    font-size: 25px;
+    padding: 0.8rem;
     background-color: black;
     color: white;
     border-radius: 8px;
@@ -90,7 +101,7 @@
 
 .hero-button-container-button {
     width: 100%;
-    font-size: 25px;
+    font-size: 21px;
     background-color: black;
     color: white;
     border-radius: 8px;
@@ -99,7 +110,6 @@
 .hero-image-container {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     justify-content: right;
     align-items: right;
 }

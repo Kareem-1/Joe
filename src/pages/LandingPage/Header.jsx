@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <div className='header'>
             <div>
-                <img src={logo} width={128} />
+                <img src={logo} width={110} />
             </div>
             <div>
                 <button >Admin</button>
