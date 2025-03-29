@@ -7,7 +7,9 @@ export default function Header() {
                 <img src={logo} width={110} />
             </div>
             <div>
-                <button >Admin</button>
+                <Link to={"/login"}>
+                    <button >Admin</button>
+                </Link>
             </div>
         </div>
     )

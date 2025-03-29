@@ -34,7 +34,7 @@
 }
 
 .ellipse1-container::before {
-    bottom: -200px;
+    bottom: -300px;
     left: -180px;
 }
 
@@ -47,8 +47,10 @@
 
 .hero-container {
     display: flex;
+    height: 100vh;
     flex-direction: row;
     padding-left: 5rem;
+    margin-top: 5rem;
 }
 
 .hero-text-container {
@@ -69,7 +71,7 @@ h1,p {
 }
 .hero-text-container h1 p {
     min-width: 100%;
-    font-size: 90px;
+    font-size: 78px;
     text-align: left;
     font-weight: 800;
 }
@@ -89,6 +91,7 @@ h1,p {
     margin-top: 10%;
     color: white;
     margin-top: 170px;
+    margin-bottom: 20px;
 }
 
 .hero-button-container-Link {
