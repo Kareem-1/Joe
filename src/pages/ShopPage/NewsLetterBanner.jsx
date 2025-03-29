@@ -6,7 +6,7 @@ export default function NewsletterBanner() {
 
   const handleSubscribe = async () => {
     try {
-      const response = await fetch("http://localhost:3001/newsletter", {
+      const response = await fetch("https://joe-sbackend.fly.dev/newsletter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

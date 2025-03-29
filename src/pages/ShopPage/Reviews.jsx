@@ -23,7 +23,7 @@ export default function Reviews() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch("http://localhost:3001/reviews");
+        const response = await fetch("https://joe-sbackend.fly.dev/reviews");
         if (response.ok) {
           const data = await response.json();
           setReviews(data.filter(item => item.confirm === true));
@@ -52,7 +52,7 @@ export default function Reviews() {
     console.log(reviewData);
 
     try {
-      const response = await fetch("http://localhost:3001/reviews", {
+      const response = await fetch("https://joe-sbackend.fly.dev/reviews", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

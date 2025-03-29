@@ -55,7 +55,7 @@ function Checkout() {
     };
 
     try {
-      const response = await fetch("http://localhost:3001/paymob/api/initiate-payment", {
+      const response = await fetch("https://joe-sbackend.fly.dev/paymob/api/initiate-payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
