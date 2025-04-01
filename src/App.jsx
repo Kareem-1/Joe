@@ -8,6 +8,7 @@ import LoginPage from './pages/Login/Login';
 import PrivateRoute from './routes/PrivateRoute.jsx';
 import Dashboard from './pages/Dashboard/Dashboard.jsx';
 import Checkout from './pages/Checkout/Checkout.jsx';
+import ProtectedRoute from './components/ProtectedRoute.jsx';
 
 function App() {
 
@@ -30,9 +31,9 @@ function App() {
             <Route
               path="/admin-dashboard"
               element={
-                <PrivateRoute>
+                <ProtectedRoute>
                   <Dashboard />
-                </PrivateRoute>
+                </ProtectedRoute>
               }
             />
           </Routes>
