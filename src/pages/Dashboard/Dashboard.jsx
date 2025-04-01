@@ -81,7 +81,7 @@ function ResourceTable({ resourceKey }) {
 
     // Pagination states
     const [page, setPage] = useState(1);
-    const pageSize = 5;
+    const pageSize = 8;
 
     // Fetch data from the backend
     const fetchData = async () => {
