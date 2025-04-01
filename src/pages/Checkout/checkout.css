@@ -264,3 +264,43 @@ body {
   margin-top: 4px;
   display: block;
 }
+
+/* Add this to the bottom of your checkout.css */
+
+/* For tablet and mobile screens */
+@media (max-width: 768px) {
+  /* Stack the two columns vertically */
+  .app-container2 {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Left and right columns take full width and adjust padding */
+  .left-column, .right-column {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  
+  /* Remove the right border from the left column and add a bottom border */
+  .left-column {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+  }
+  
+  /* Adjust the back button for smaller screens */
+  .back-button {
+    margin: 10px;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+/* For very small screens, if needed */
+@media (max-width: 550px) {
+  .back-button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+

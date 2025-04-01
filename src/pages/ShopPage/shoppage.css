@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+/* ----------------- Desktop / Base Styles ----------------- */
 .shop-navigation {
   display: grid;
   grid-template-columns: 0.6fr 1fr 5fr 1fr;
@@ -105,6 +106,7 @@ ul {
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s;
+  max-width: 100%;
 }
 
 .product-images-container img:hover {
@@ -263,7 +265,6 @@ h2 {
 
 .details-and-ratings-container {
   width: calc(100% - 360px);
-  height: 100%;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -292,7 +293,7 @@ h2 {
   padding-bottom: 0;
 }
 
-.reviews-section{
+.reviews-section {
   margin-bottom: 90px;
 }
 
@@ -354,10 +355,30 @@ h2 {
   width: 8rem;
   height: 2.6rem;
   border: none;
-  padding: 12px 18px;
-  border-radius: 30px;
   padding: 8px 16px;
+  border-radius: 30px;
   cursor: pointer;
+}
+
+/* Load More Button CSS (Previously missing) */
+.load-more-button {
+  background-color: rgba(254, 253, 253, 0.844);
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 32px;
+  border: 1px solid #0000001a;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-button:hover {
+  background-color: #00000033;
 }
 
 .reviewcards-container {
@@ -379,7 +400,6 @@ h2 {
   border: 1px solid #e5e5e5;
   border-radius: 20px;
   padding: 16px;
-  border: 1px solid black;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -430,355 +450,38 @@ h2 {
   color: #777;
 }
 
-@media (max-width: 1200px) {
-  .shop-navigation {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .header-line,
-  .details-and-ratings-container,
-  .reviews-container,
-  .reviewcard-container,
-  .product-container {
-    width: 90%;
-    margin: auto;
-  }
-  .reviewcards-container {
-    width: 95%;
-    margin: auto;
-  }
-  .reviewcard-container {
-    min-width: 380px;
-    margin: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .shop-navigation {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
-  .shop-navigation-items {
-    width: 100%;
-    justify-content: center;
-    margin: auto;
-  }
-  .ending-icons-container {
-    justify-content: center;
-  }
-  .search-container {
-    width: 100%;
-    margin: auto;
-  }
-  .product-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    width: 88%;
-    margin: auto;
-  }
-  .product-images-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .product-images-container div:first-child {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  .product-images-container div:last-child {
-    margin-top: 20px;
-  }
-  .product-text-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  .details-and-ratings-container {
-    flex-direction: row;
-    align-items: center;
-    width: 88%;
-    margin: auto;
-  }
-  .details-and-ratings-open,
-  .details-and-ratings-close {
-    width: 100%;
-    min-width: auto;
-    text-align: center;
-    margin-bottom: 0;
-    height: auto;
-    padding-bottom: 10px;
-    margin: auto;
-  }
-  .header-line,
-  .details-and-ratings-container,
-  .reviews-container,
-  .reviewcards-container {
-    width: 88%;
-    margin: auto;
-  }
-  .reviews-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    width: 88%;
-    margin: auto;
-  }
-  .reviews-actions {
-    margin-top: 10px;
-  }
-  .reviewcards-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-    margin: auto;
-  }
-}
-
-@media (max-width: 550px) {
-  .shop-navigation {
-    width: 100%;
-    margin: auto;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  .shop-navigation-items {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .search-container {
-    width: 100%;
-    margin: auto;
-  }
-  .product-container {
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .product-text-container {
-    width: 100%;
-    margin: auto;
-    padding: 0 10px;
-  }
-  .details-and-ratings-container {
-    width: 100%;
-    margin: auto;
-    flex-direction: row;
-    align-items: center;
-  }
-  .details-and-ratings-open,
-  .details-and-ratings-close {
-    width: 100%;
-    text-align: center;
-  }
-  .header-line,
-  .details-and-ratings-container,
-  .reviews-container,
-  .reviewcards-container .product-container {
-    width: 100%;
-    margin: auto;
-  }
-  .reviews-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    width: 100%;
-    margin: auto;
-  }
-  .reviewcards-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-    margin: auto;
-  }
-  .reviewcard-container {
-    min-width: 0;
-    max-width: 100%;
-    width: 100%;
-  }
-  .details-and-ratings {
-    width: 100%;
-    margin-left: 1rem;
-  }
-}
-
-/* Modal overlay to cover the screen with a subtle dark background */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease;
-}
-
-/* The modal box with a white background, rounded corners, and a shadow */
-.modal {
-  background: #fff;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 400px;
-  max-width: 90%;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  animation: scaleIn 0.3s ease;
+.cart-icon-wrapper {
   position: relative;
+  cursor: pointer;
 }
 
-/* Header styling for the modal */
-.modal h2 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  text-align: center;
-  color: #333;
-}
-
-/* Form groups styling */
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
   font-weight: bold;
-  color: #555;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border 0.2s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-/* Styling for the modal buttons */
-.modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.modal-actions button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.modal-actions button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.modal-actions button[type="submit"]:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-}
-
-.modal-actions button[type="button"] {
-  background-color: #6c757d;
-  color: #fff;
-}
-
-.modal-actions button[type="button"]:hover {
-  background-color: #565e64;
-  transform: translateY(-2px);
-}
-
-/* Simple fade in animation for overlay */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Scale in animation for modal box */
-@keyframes scaleIn {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-.load-more-button {
-  background-color: rgba(254, 253, 253, 0.844);
-  color: #000; /* Adjust text color as needed */
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 32px;
-  border: 1px solid #0000001a;
-  display: block;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 40px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-bottom: 30px;
-}
-
-.load-more-button:hover {
-  background-color: #00000033; /* Slightly darker on hover */
-}
-
+/* Footer */
 .footer {
-  background-color: #f0f0f0; /* Footer background color */
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 180px;
-  font-family: sans-serif; /* Change to your preferred font */
+  background-color: #f0f0f0;
+  padding: 180px 20px 20px;
+  font-family: sans-serif;
 }
 
 .footer-container {
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  justify-content: space-between;
   gap: 20px;
 }
 
-/* Left Section */
 .footer-left {
   align-items: start;
   min-width: 250px;
@@ -786,7 +489,7 @@ h2 {
 }
 
 .footer-logo {
-  width: 120px; /* Adjust logo size as needed */
+  width: 120px;
   margin-bottom: 20px;
 }
 
@@ -796,7 +499,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Social Icons */
 .footer-socials a {
   color: #000000;
   margin-right: 10px;
@@ -811,17 +513,12 @@ h2 {
   opacity: 0.7;
 }
 
-/* Right Section */
 .footer-right {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
   gap: 40px;
-}
-
-.right-columns{
-  background-color: #FCFDFF;
 }
 
 .footer-column {
@@ -854,7 +551,6 @@ h2 {
   text-decoration: underline;
 }
 
-/* Bottom Section (Payment Icons, etc.) */
 .footer-bottom {
   max-width: 1200px;
   margin-top: 30px;
@@ -864,21 +560,18 @@ h2 {
 }
 
 .footer-bottom img {
-  width: 50px; /* Adjust payment icon size as needed */
+  width: 50px;
 }
 
-/* 
-  This top-level container is set to overlap the footer.
-  Adjust margin-top to control how much it overlaps.
-*/
+/* Newsletter Banner */
 .newsletter-banner {
   position: absolute;
   width: 100%;
-  margin-top: -250px; /* Adjust this as needed for your layout */
+  margin-top: -250px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0 20px; /* some horizontal padding for smaller screens */
+  padding: 0 20px;
 }
 
 .newsletter-content {
@@ -890,13 +583,10 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-
-  /* Internal padding around content */
   padding: 40px 80px;
   box-sizing: border-box;
 }
 
-/* Title */
 .newsletter-title {
   font-family: "Integral CF", sans-serif;
   font-weight: 700;
@@ -906,32 +596,28 @@ h2 {
   margin: 0;
 }
 
-/* Input & Button Wrapper */
 .newsletter-input-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center; /* Vertically center the input and button */
+  align-items: center;
 }
 
-/* Box that holds icon + input */
 .newsletter-input-box {
   display: flex;
   align-items: center;
   background-color: #fff;
   border-radius: 10px;
   padding: 10px 15px;
-  min-width: 300px; /* ensures input doesn’t collapse too small on wide screens */
+  min-width: 300px;
 }
 
-/* Icon inside input box */
 .newsletter-icon {
   color: #000;
   font-size: 1.2rem;
   margin-right: 10px;
 }
 
-/* The actual input field */
 .newsletter-input-box input {
   border: none;
   outline: none;
@@ -941,7 +627,6 @@ h2 {
   background: transparent;
 }
 
-/* Subscribe Button */
 .newsletter-button {
   background-color: #fff;
   color: #000;
@@ -959,64 +644,11 @@ h2 {
   background-color: #eaeaea;
 }
 
-/* --- Media Queries (Responsive Adjustments) --- */
-
-/* 
-  For tablets and below, stack the title and input section vertically
-  and center them. 
-*/
-@media (max-width: 1024px) {
-  .newsletter-content {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px; /* reduce padding on smaller screens */
-  }
-
-  .newsletter-title {
-    font-size: 32px;
-    line-height: 38px;
-    margin-bottom: 20px;
-  }
-
-  .newsletter-input-wrapper {
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-  }
-}
-
-/* For mobile screens (768px and below), further adjustments */
-@media (max-width: 768px) {
-  /* Remove absolute positioning if it causes layout issues on very small screens */
-  .newsletter-banner {
-    position: static;
-    margin-top: 20px; /* You can remove or adjust this as needed */
-  }
-
-  .newsletter-content {
-    padding: 20px;
-  }
-
-  .newsletter-title {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .newsletter-input-box {
-    width: 100%; /* let input box take full width */
-    min-width: auto;
-  }
-
-  .newsletter-button {
-    width: 100%; /* button spans full width below the input */
-  }
-}
-
 /* Cart Side Menu */
 .cart-side-menu {
   position: fixed;
   top: 0;
-  right: -350px; /* Hidden by default */
+  right: -350px;
   width: 350px;
   height: 100%;
   background-color: #fff;
@@ -1072,6 +704,7 @@ h2 {
   cursor: pointer;
 }
 
+/* Details Section */
 .details-section {
   width: calc(100% - 360px);
   margin: 30px auto;
@@ -1097,20 +730,255 @@ h2 {
   white-space: pre-wrap;
 }
 
+/* ----------------- Media Queries (Responsive Adjustments) ----------------- */
 
-.cart-icon-wrapper {
-  position: relative;
-  cursor: pointer;
+/* Up to 1200px */
+@media (max-width: 1200px) {
+  .shop-navigation {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .header-line,
+  .details-and-ratings-container,
+  .reviews-container,
+  .reviewcard-container,
+  .product-container {
+    width: 90%;
+    margin: auto;
+  }
+  .reviewcards-container {
+    width: 95%;
+    margin: auto;
+  }
+  .reviewcard-container {
+    min-width: 380px;
+    margin: auto;
+  }
 }
 
-.cart-badge {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-  font-weight: bold;
+/* Tablets and mid-sized devices up to 1024px */
+@media (max-width: 1024px) {
+  .newsletter-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .newsletter-title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+  .newsletter-input-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+}
+
+/* Mobile screens up to 768px */
+@media (max-width: 768px) {
+  .shop-navigation {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .shop-navigation-items {
+    width: 100%;
+    justify-content: center;
+  }
+  .ending-icons-container {
+    justify-content: center;
+  }
+  .search-container {
+    width: 100%;
+    margin: auto;
+  }
+  .header-line {
+    width: 100%;
+  }
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 88%;
+    margin: auto;
+  }
+  .product-images-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .product-images-container div:first-child {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .product-images-container div:last-child {
+    margin-top: 20px;
+  }
+  .product-text-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .details-and-ratings-container {
+    flex-direction: row;
+    align-items: center;
+    width: 88%;
+    margin: auto;
+  }
+  .details-and-ratings-open,
+  .details-and-ratings-close {
+    width: 100%;
+    min-width: auto;
+    text-align: center;
+    margin-bottom: 0;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .header-line,
+  .details-and-ratings-container,
+  .reviews-container,
+  .reviewcards-container {
+    width: 88%;
+    margin: auto;
+  }
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .reviews-actions {
+    margin-top: 10px;
+  }
+  .reviewcards-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  /* Adjust modal for small screens */
+  .modal {
+    width: 90%;
+  }
+  /* Newsletter Banner: remove absolute positioning */
+  .newsletter-banner {
+    position: static;
+    margin-top: 20px;
+  }
+  .newsletter-content {
+    padding: 20px;
+  }
+  .newsletter-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .newsletter-input-box {
+    width: 100%;
+    min-width: auto;
+  }
+  .newsletter-button {
+    width: 100%;
+  }
+}
+
+/* Very small mobile screens up to 550px */
+@media (max-width: 550px) {
+  .shop-navigation {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .shop-navigation-items {
+    width: 100%;
+    justify-content: center;
+  }
+  .search-container {
+    width: 100%;
+  }
+  .product-container {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-text-container {
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+  }
+  .details-and-ratings-container {
+    width: 100%;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  .details-and-ratings-open,
+  .details-and-ratings-close {
+    width: 100%;
+    text-align: center;
+  }
+  .header-line,
+  .details-and-ratings-container,
+  .reviews-container,
+  .reviewcards-container,
+  .product-container {
+    width: 100%;
+    margin: auto;
+  }
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .reviewcards-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .reviewcard-container {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .details-and-ratings {
+    width: 100%;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Make the overall container use full width with some horizontal padding */
+  .details-and-ratings {
+    width: 100%;
+    padding: 0 10px;
+    margin: auto;
+  }
+  /* Stack the buttons vertically and add spacing */
+  .details-and-ratings-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* Ensure each button occupies full width with proper padding */
+  .details-and-ratings-open,
+  .details-and-ratings-close {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+    border-bottom: none; /* Optional: remove bottom border if it feels too heavy on mobile */
+  }
+  /* Adjust the header line to span the container */
+  .header-line {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
