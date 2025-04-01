@@ -3,6 +3,7 @@ import CheckoutForm from './CheckoutForm';
 import CartReview from './CartReview';
 import { useCart } from '../../context/CartContext';
 import './checkout.css';
+import { Link } from 'react-router-dom';
 
 function Checkout() {
   const [formData, setFormData] = useState({
@@ -13,12 +14,12 @@ function Checkout() {
     city: '',
     state: '',
     additionalDetails: '',
-    agreeToTerms: true,
+    agreeToTerms: false,
     email: '',
     building: '',
     floor: '',
     apartment: '',
-    deliveryOption: true,
+    deliveryOption: false,
   });
 
   const [paymentUrl, setPaymentUrl] = useState(null);
@@ -90,20 +91,23 @@ function Checkout() {
   };
 
   return (
-    <div className="app-container2">
-      {paymentUrl ? (
-        <iframe src={paymentUrl} title="Paymob Payment" className="payment-iframe"></iframe>
-      ) : (
-        <>
-          <div className="left-column">
-            <h2 className="checkout-title">Checkout</h2>
-            <CheckoutForm formData={formData} setFormData={setFormData} />
-          </div>
-          <div className="right-column">
-            <CartReview onPayNow={handlePayNow} />
-          </div>
-        </>
-      )}
+    <div>
+      <Link to="/shop" className="back-button">← Back To Shop</Link>
+      <div className="app-container2">
+        {paymentUrl ? (
+            <iframe src={paymentUrl} title="Paymob Payment" className="payment-iframe"></iframe>
+        ) : (
+          <>
+            <div className="left-column">
+              <h2 className="checkout-title">Checkout</h2>
+              <CheckoutForm formData={formData} setFormData={setFormData} />
+            </div>
+            <div className="right-column">
+              <CartReview onPayNow={handlePayNow} />
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

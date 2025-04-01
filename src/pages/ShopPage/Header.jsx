@@ -3,6 +3,7 @@ import logo from '../../assets/joelogo.png';
 import { IoSearchOutline, IoCartOutline, IoPersonCircleSharp } from "react-icons/io5";
 import { useCart } from '../../context/CartContext';
 import CartSideMenu from './CartSideMenu';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const { cartItems, setIsCartOpen } = useCart();
@@ -18,7 +19,7 @@ export default function Header() {
     <>
       <div className='shop-navigation'>
         <div>
-          <img src={logo} width={118} alt="Logo" />
+          <Link to={'/'}><img src={logo} width={118} alt="Logo" /></Link>
         </div>
         <div>
           <ul className='shop-navigation-items'>

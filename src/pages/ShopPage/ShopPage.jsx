@@ -14,8 +14,8 @@ export default function ShopPage() {
             <Product />
             <div className='details-and-ratings'>
                 <div className='details-and-ratings-container'>
-                    {                   <button onClick={() => setOpen('details')} className={open != 'reviews' ? 'details-and-ratings-open' : 'details-and-ratings-close'}>Product Details</button>
-                    }                    <button onClick={() => setOpen('reviews')} className={open == 'reviews' ? 'details-and-ratings-open' : 'details-and-ratings-close'}>Rating & Reviews</button>
+                    <button onClick={() => setOpen('details')} className={open != 'reviews' ? 'details-and-ratings-open' : 'details-and-ratings-close'}>Product Details</button>
+                    <button onClick={() => setOpen('reviews')} className={open == 'reviews' ? 'details-and-ratings-open' : 'details-and-ratings-close'}>Rating & Reviews</button>
                 </div>
                 <div className='header-line'></div>
             </div>
