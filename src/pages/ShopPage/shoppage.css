@@ -1449,3 +1449,21 @@ h2 {
 .footer-socials{
   color: black;
 }
+
+.customization-p {
+  color: #6e6e6e; /* subtle gray */
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-weight: 00;
+}
+
+.customization-a {
+  font-size: 0.85rem;
+  color: #25D366; /* WhatsApp green */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.customization-a:hover {
+  text-decoration: underline;
+}

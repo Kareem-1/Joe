@@ -24,12 +24,22 @@ export default function HeroSection() {
                     <img src={productimage} width={450} />
                 </div>
                 <div className='icons-container'>
-                    <div >
-                        <button className='icon'><FaInstagram size={24} /></button>
-                    </div>
-                    <div >
-                        <button className='icon'><FaFacebook size={24} /></button>
-                    </div>
+                    <a 
+                        href="https://www.instagram.com/dental.dynamics1?igsh=NzZkbXZoaDdqem9x" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className='icon'
+                    >
+                        <FaInstagram size={24} />
+                    </a>
+                    <a 
+                        href="https://www.facebook.com/share/1GGDfV6D52/?mibextid=wwXIfr" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className='icon'
+                    >
+                        <FaFacebook size={24} />
+                    </a>
                 </div>
             </div>
         </div>

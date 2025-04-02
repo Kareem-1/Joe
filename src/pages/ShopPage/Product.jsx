@@ -53,29 +53,29 @@ export default function Product() {
       {/* Product Images */}
       <div className="product-images-container">
         <div>
-          <img 
-            src={image1} 
-            width={95} 
-            alt="Product 1" 
+          <img
+            src={image1}
+            width={95}
+            alt="Product 1"
             onClick={() => setPopupImage(image1)}
           />
-          <img 
-            src={image2} 
-            width={95} 
-            alt="Product 2" 
+          <img
+            src={image2}
+            width={95}
+            alt="Product 2"
             onClick={() => setPopupImage(image2)}
           />
-          <img 
-            src={image3} 
-            width={95} 
-            alt="Product 3" 
+          <img
+            src={image3}
+            width={95}
+            alt="Product 3"
             onClick={() => setPopupImage(image3)}
           />
         </div>
         <div>
-          <img 
-            src={productimage} 
-            width={400} 
+          <img
+            src={productimage}
+            width={400}
             alt="Main Product"
             onClick={() => setPopupImage(productimage)}
           />
@@ -85,16 +85,16 @@ export default function Product() {
       {/* Popup Modal for Expanded Image */}
       {popupImage && (
         <div className="image-popup-overlay">
-          <button 
-            className="popup-close" 
+          <button
+            className="popup-close"
             onClick={() => setPopupImage(null)}
           >
             &times;
           </button>
-          <img 
-            src={popupImage} 
-            alt="Expanded Product" 
-            className="image-popup" 
+          <img
+            src={popupImage}
+            alt="Expanded Product"
+            className="image-popup"
           />
         </div>
       )}
@@ -167,6 +167,17 @@ export default function Product() {
               </div>
             ))}
           </div>
+          <p className="customization-p">
+            Need a different size?{' '}
+            <a
+              href="https://wa.me/201003158719"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="customization-a"
+            >
+              Chat with us on WhatsApp
+            </a>
+          </p>
         </div>
 
         <hr className="section-divider" />

@@ -22,10 +22,10 @@ export default function Footer() {
                     </p>
 
                     <div className="footer-socials">
-                        <a href="#facebook" aria-label="facebook">
+                        <a href="https://www.facebook.com/share/1GGDfV6D52/?mibextid=wwXIfr" target="_blank" aria-label="facebook">
                             <img src={FB} alt="Facebook" />
                         </a>
-                        <a href="#instagram" aria-label="instagram">
+                        <a href="https://www.instagram.com/dental.dynamics1?igsh=NzZkbXZoaDdqem9x" target="_blank" aria-label="instagram">
                             <img src={IG} alt="Instagram" />
                         </a>
                     </div>
