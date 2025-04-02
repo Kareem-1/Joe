@@ -58,7 +58,7 @@ body {
   padding: 15px;
   margin-bottom: 20px;
   background-color: white;
-  accent-color: white;
+  accent-color: rgb(0, 0, 0);
   color: black;
 }
 
@@ -111,7 +111,7 @@ body {
 .terms-checkbox input[type="checkbox"] {
   width: 20px;
   height: 20px;
-  accent-color: rgb(255, 255, 255);
+  accent-color: rgb(0, 0, 0);
   cursor: pointer;
   color: black;
 

@@ -11,3 +11,10 @@ main {
   box-sizing: border-box;
   zoom: 98%;
 }
+
+button{
+    color: black;
+}
+p{
+  color: black;
+}

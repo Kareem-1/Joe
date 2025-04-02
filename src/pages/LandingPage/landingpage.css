@@ -131,6 +131,7 @@ h1, p {
     justify-content: center;
     border-radius: 18px;
     padding: 8px;
+    color: black !important;
 }
 
 .desktop-only { display: block; }
