@@ -145,7 +145,7 @@ button {
 
 /* Responsive Styles for Tablet and Phones */
 @media screen and (max-width: 768px) {
-    /* Switch hero-container to grid layout */
+    /* Existing mobile adjustments */
     .hero-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -161,8 +161,8 @@ button {
         height: auto;
         align-items: center;
         justify-items: center;
+        position: relative; /* Ensure icons can be absolutely positioned */
     }
-    /* Flatten the hero-text-container so its children can be positioned separately */
     .hero-text-container {
         display: contents;
     }
@@ -171,7 +171,9 @@ button {
         text-align: center;
         margin-bottom: 0.5rem;
     }
-    /* Description paragraph (the one after h1) */
+    .hero-text-container h1 p {
+        text-align: center;
+    }
     .hero-text-container > p {
         grid-area: text;
         text-align: center;
@@ -184,8 +186,9 @@ button {
         justify-self: center;
     }
     .hero-image-container img {
-        width: 80%;
+        width: 100%;
         height: auto;
+        margin: auto;
     }
     .hero-button-container {
         grid-area: button;
@@ -196,25 +199,33 @@ button {
     .hero-button-container-Link {
         width: auto;
         padding: 0.8rem 1.5rem;
-        margin: 0 auto;      /* Added to center the button */
-        text-align: center;  /* Ensure the text within is centered */
+        margin: 0 auto;
+        text-align: center;
     }
+    /* Reposition icons-container */
     .icons-container {
-        justify-content: center;
-        margin-top: 1rem;
+        position: absolute;
+        bottom: 20px;   /* Adjust vertical offset as needed */
+        left: 20px;     /* Adjust horizontal offset as needed */
+        display: flex;
+        align-items: center;
+        gap: 10px;      /* Optional spacing between icons */
+        margin-bottom: -50px;
     }
 }
 
 /* Additional adjustments for Mobile Phones */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 615px) {
     .header img {
         width: 80px;
     }
     .hero-text-container h1 p {
         font-size: 32px;
+        text-align: center;
     }
     .hero-text-container > p {
         font-size: 16px;
+        text-align: center;
     }
     .hero-button-container-Link {
         padding: 0.8rem 1rem;
@@ -223,6 +234,6 @@ button {
         text-align: center;
     }
     .hero-image-container img {
-        width: 90%;
+        width: 100%;
     }
 }

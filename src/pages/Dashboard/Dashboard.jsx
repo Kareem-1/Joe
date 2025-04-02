@@ -358,48 +358,46 @@ function ResourceTable({ resourceKey }) {
 
 export default function Dashboard() {
     const [selectedResource, setSelectedResource] = useState("orders");
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
         <div className="app-container">
-            {/* Sidebar */}
-            <aside className="sidebar">
-                <div className="logo-container">
-                    <img src={logo} alt="Logo" />
+            {/* Collapsible Sidebar */}
+            <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+                <div className="sidebar-header">
+                    <img src={logo} alt="Logo" className="sidebar-logo" />
+                    <button
+                        className="close-sidebar"
+                        onClick={() => setSidebarOpen(false)}
+                    >
+                        &times;
+                    </button>
                 </div>
                 <nav className="nav-links">
                     <button
-                        className={
-                            selectedResource === "orders" ? "nav-item active" : "nav-item"
-                        }
-                        onClick={() => setSelectedResource("orders")}
+                        className={selectedResource === "orders" ? "nav-item active" : "nav-item"}
+                        onClick={() => { setSelectedResource("orders"); setSidebarOpen(false); }}
                     >
                         <img src={Orders} alt="Orders icon" />
                         Orders
                     </button>
                     <button
-                        className={
-                            selectedResource === "admins" ? "nav-item active" : "nav-item"
-                        }
-                        onClick={() => setSelectedResource("admins")}
+                        className={selectedResource === "admins" ? "nav-item active" : "nav-item"}
+                        onClick={() => { setSelectedResource("admins"); setSidebarOpen(false); }}
                     >
                         <img src={Admins} alt="Admins icon" />
                         Admins
                     </button>
                     <button
-                        className={
-                            selectedResource === "reviews" ? "nav-item active" : "nav-item"
-                        }
-                        onClick={() => setSelectedResource("reviews")}
+                        className={selectedResource === "reviews" ? "nav-item active" : "nav-item"}
+                        onClick={() => { setSelectedResource("reviews"); setSidebarOpen(false); }}
                     >
                         <MdOutlineReviews className="nav-icon" size={22} />
-
                         Reviews
                     </button>
                     <button
-                        className={
-                            selectedResource === "newsletters" ? "nav-item active" : "nav-item"
-                        }
-                        onClick={() => setSelectedResource("newsletters")}
+                        className={selectedResource === "newsletters" ? "nav-item active" : "nav-item"}
+                        onClick={() => { setSelectedResource("newsletters"); setSidebarOpen(false); }}
                     >
                         <FaRegNewspaper className="nav-icon" size={22} />
                         Newsletters
@@ -409,6 +407,16 @@ export default function Dashboard() {
 
             {/* Main Content */}
             <main className="main-content">
+                {/* Header for mobile with hamburger menu */}
+                <div className="mobile-header">
+                    <button
+                        className="open-sidebar"
+                        onClick={() => setSidebarOpen(true)}
+                    >
+                        &#9776;
+                    </button>
+                    <h1>{selectedResource.charAt(0).toUpperCase() + selectedResource.slice(1)}</h1>
+                </div>
                 <ResourceTable resourceKey={selectedResource} />
             </main>
         </div>

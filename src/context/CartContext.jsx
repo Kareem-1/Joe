@@ -44,7 +44,7 @@ export function CartProvider({ children }) {
       if (existingIndex !== -1) {
         const updatedItems = [...prev];
         // Instead of replacing the quantity, add the new orderSize to the existing one
-        updatedItems[existingIndex].orderSize += item.orderSize / 2;
+        updatedItems[existingIndex].orderSize += item.orderSize;
         return updatedItems;
       }
       return [...prev, item];

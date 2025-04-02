@@ -1,3 +1,4 @@
+/* Dashboard Global Styles */
 
 /* Container for sidebar + main content */
 .app-container {
@@ -5,7 +6,7 @@
   height: 100vh;
 }
 
-/* Sidebar styles */
+/* Sidebar Styles */
 .sidebar {
   width: 220px;
   background-color: #F9FAFB;
@@ -13,21 +14,34 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  transition: transform 0.3s ease;
 }
 
-.logo-container {
-  margin-bottom: 30px;
+.sidebar-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo-container img {
+.sidebar-logo {
   width: 120px;
-  height: auto;
 }
 
+.close-sidebar {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation Links */
 .nav-links {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 30px;
 }
 
 .nav-item {
@@ -42,23 +56,22 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  border-radius: 6px;
 }
 
 .nav-item:hover {
   background-color: #e5e7eb;
-  border-radius: 10px;
 }
 
 .nav-item.active {
   background-color: #E5E7EB;
-  border-radius: 10px;
 }
 
 .nav-icon {
   font-size: 18px;
 }
 
-/* Main content area */
+/* Main Content Area */
 .main-content {
   flex: 1;
   background-color: #ffffff;
@@ -66,13 +79,30 @@
   overflow-y: auto;
 }
 
-/* Table container */
+/* Mobile Header (only visible on small screens) */
+.mobile-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #F9FAFB;
+  margin-bottom: 20px;
+}
+
+.open-sidebar {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Resource Table Styles */
 .resource-table {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Table header with create button */
+/* Table Header & Create Button */
 .table-header {
   display: flex;
   justify-content: space-between;
@@ -96,11 +126,12 @@
   font-size: 14px;
 }
 
-.plus-sign{
+.plus-sign {
   margin-right: 5px;
-  margin-left: 0px;
+  margin-left: 0;
 }
-/* Table styles */
+
+/* Table Styles */
 table {
   width: 100%;
   border-spacing: 0;
@@ -138,7 +169,7 @@ tr:last-child td {
   border-bottom: none;
 }
 
-/* Badge styles for statuses */
+/* Badge Styles */
 .badge {
   display: inline-block;
   padding: 4px 10px;
@@ -149,11 +180,8 @@ tr:last-child td {
   color: #fff;
 }
 
-/* Example status color classes: adjust as needed */
-.badge.new {
-  background-color: #3b82f6;
-}
-.badge.new-order {
+.badge.new,
+.badge["new order"] {
   background-color: #3b82f6;
 }
 .badge.pending {
@@ -169,7 +197,7 @@ tr:last-child td {
   background-color: #6b7280;
 }
 
-/* Icon buttons for edit/delete */
+/* Icon Button Styles */
 .icon-button {
   border: none;
   background: none;
@@ -184,7 +212,7 @@ tr:last-child td {
   color: #dc2626;
 }
 
-/* Pagination styles */
+/* Pagination Styles */
 .pagination {
   display: flex;
   justify-content: flex-end;
@@ -206,7 +234,7 @@ tr:last-child td {
   cursor: not-allowed;
 }
 
-/* Modal styles */
+/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -250,11 +278,8 @@ tr:last-child td {
 }
 
 .form-group input[type="checkbox"] {
-  position: absolute;
   transform: scale(1.2);
-  margin-top: -20px;
-  margin-left: -130px;
-
+  margin-right: 8px;
 }
 
 .modal-buttons {
@@ -279,4 +304,76 @@ tr:last-child td {
   padding: 8px 14px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Stack layout: sidebar becomes collapsible */
+  .app-container {
+    flex-direction: column;
+  }
+  
+  /* Sidebar hidden by default on mobile */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+  
+  /* Show sidebar when open */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  /* Show close button in sidebar */
+  .close-sidebar {
+    display: block;
+  }
+  
+  /* Mobile Header */
+  .mobile-header {
+    display: flex;
+  }
+  
+  .main-content {
+    padding: 10px;
+    margin-top: 60px; /* leave space for mobile header */
+  }
+  
+  /* Make table scrollable */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  /* Adjust modal width */
+  .modal-content {
+    width: 90%;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .nav-item {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+  .sidebar-logo {
+    width: 100px;
+  }
+  .mobile-header h1 {
+    font-size: 18px;
+  }
+  .main-content {
+    padding: 5px;
+  }
 }

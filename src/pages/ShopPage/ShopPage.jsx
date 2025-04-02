@@ -22,7 +22,6 @@ export default function ShopPage() {
             {open == 'reviews' && <Reviews />}
             {open == 'details' && <Details />}
             <Footer />
-
         </div>
     )
 }
