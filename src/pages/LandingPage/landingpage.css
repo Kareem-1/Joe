@@ -1,245 +1,328 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: black;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 3%;
-    padding-right: 10%;
-    color: #292929;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 10%;
+  color: #292929;
 }
 
 .header p {
-    color: rgb(170, 167, 167);
+  color: rgb(170, 167, 167);
 }
 
 .ellipse1-container {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
 .ellipse1-container::before,
 .ellipse1-container::after {
-    content: "";
-    position: absolute;
-    width: 750px;
-    height: 700px;
-    background: linear-gradient(to top, #d7d7d7, #FFFFFF);
-    border-radius: 50%;
-    z-index: -1;
-    overflow: hidden;
+  content: "";
+  position: absolute;
+  width: 750px;
+  height: 700px;
+  background: linear-gradient(to top, #d7d7d7, #ffffff);
+  border-radius: 50%;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .ellipse1-container::before {
-    bottom: -300px;
-    left: -180px;
+  bottom: -300px;
+  left: -180px;
 }
 
 .ellipse1-container::after {
-    background: linear-gradient(to bottom, #e8e6e6, #FFFFFF);
-    top: -200px;
-    right: -180px;
+  background: linear-gradient(to bottom, #e8e6e6, #ffffff);
+  top: -200px;
+  right: -180px;
 }
 
 .hero-container {
-    display: flex;
-    height: 100vh;
-    flex-direction: row;
-    padding-left: 5rem;
-    margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 5rem;
+  max-width: 1700px;
+  min-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 2rem;
 }
 
 .hero-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    width: 50%;
-    padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  width: 50%;
+  padding-left: 10px;
 }
 
-h1, p {
-    padding: 0;
-    margin: 0;
+h1,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-.hero-text-container h1{
-    margin-bottom: 0.5rem;
+.hero-text-container h1 {
+  margin-bottom: 0.5rem;
 }
 
 .hero-text-container h1 p {
-    min-width: 100%;
-    font-size: 78px;
-    text-align: left;
-    font-weight: 800;
+  min-width: 100%;
+  font-size: clamp(42px, 5vw, 78px);
+  text-align: left;
+  font-weight: 800;
 }
 
-.hero-text-container p {
-    font-size: 23px;
-    margin-top: 0;
-    text-align: left;
-    margin-right: 100px;
+.hero-text-container > p {
+  font-size: clamp(18px, 2vw, 23px);
+  margin-top: 0;
+  text-align: left;
+  margin-right: 100px;
 }
 
 .hero-button-container {
-    padding-left: 5rem;
-    display: flex;
-    justify-content: left;
-    width: 100%;
-    margin-top: 170px;
-    margin-bottom: 20px;
+  padding-left: 5rem;
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  margin-top: 170px;
+  margin-bottom: 20px;
 }
 
 .hero-button-container-Link {
-    width: 50%;
-    padding: 0.8rem;
-    background-color: black;
-    color: white;
-    border-radius: 8px;
+  width: 50%;
+  padding: 0.8rem;
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
 }
 
 .hero-button-container-button {
-    width: 100%;
-    font-size: 21px;
-    background-color: black;
-    color: white;
-    border-radius: 8px;
+  width: 100%;
+  font-size: 21px;
+  background-color: black;
+  color: white;
+  border-radius: 14px;
 }
 
 .hero-image-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
+}
+
+.hero-image-container img {
+  width: 450px;
 }
 
 .icons-container {
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 3%;
+}
+
+.icons-container-mobile {
+    display: none;
     align-items: center;
-    gap: 3%;
-    /* For desktop, align right by default */
-    justify-content: right;
+    justify-content: flex-start; /* or center if you prefer */
 }
 
 .icon {
-    display: flex;
-    background-color: #EEEEEE;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    padding: 8px;
-    color: black !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  border-radius: 18px;
+  padding: 8px;
+  color: black !important;
 }
 
-.desktop-only { display: block; }
-.mobile-only { display: none; }
-
-button {
-    background: none;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    cursor: pointer;
+.desktop-only {
+  display: block;
 }
 
-/* Responsive Styles for Tablet and Phones */
+.mobile-only {
+  display: none;
+}
+
+/* Laptop/Desktop Scaling (large screens) */
+@media screen and (min-width: 1440px) {
+    
+  .hero-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    gap: 4rem;
+  }
+
+  .hero-text-container h1 p {
+    font-size: clamp(60px, 6vw, 72px);
+  }
+
+  .hero-text-container > p {
+    font-size: 25px;
+    margin-right: 150px;
+  }
+
+  .hero-button-container {
+    margin-top: 200px;
+  }
+
+  .hero-button-container-button {
+    font-size: 26px;
+  }
+
+  .hero-image-container img {
+    width: 500px;
+  }
+
+  .icons-container {
+    gap: 20px;
+  }
+
+  .icon {
+    padding: 10px;
+  }
+}
+
+/* Tablet */
 @media screen and (max-width: 768px) {
-
-    /* Existing mobile adjustments */
-    .hero-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "heading"
-            "text"
-            "image"
-            "button";
-        row-gap: 1rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        margin-top: 2rem;
-        height: auto;
-        align-items: center;
-        justify-items: center;
-        position: relative; /* Ensure icons can be absolutely positioned */
-    }
-    .hero-text-container {
-        display: contents;
-    }
-    .hero-text-container h1 {
-        grid-area: heading;
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
-    .hero-text-container h1 p {
-        text-align: center;
-    }
-    .hero-text-container > p {
-        grid-area: text;
-        text-align: center;
-        margin: 0 auto;
-        font-size: 18px;
-        margin-right: 0;
-    }
-    .hero-image-container {
-        justify-self: center;
-    }
-    .hero-image-container img {
-        width: 100%;
-        height: auto;
-        margin: auto;
-    }
-    .hero-button-container {
-        grid-area: button;
-        justify-self: center;
-        padding-left: 0;
-        margin-top: 1rem;
-    }
-    .hero-button-container-Link {
-        width: auto;
-        padding: 0.8rem 1.5rem;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .icons-container {
-        display: none;
-        position: absolute;
-        bottom: 0px;   
-        left: 0px;     
+    .icons-container-mobile {
         display: flex;
-        align-items: center;
-        gap: 10px;
     }
+    
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 0px;
+    grid-template-areas:
+      "heading"
+      "text"
+      "image"
+      "button";
+    row-gap: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+  }
+
+  .hero-text-container {
+    display: contents;
+  }
+
+  .hero-text-container h1 {
+    grid-area: heading;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-text-container h1 p {
+    text-align: center;
+  }
+
+  .hero-text-container > p {
+    grid-area: text;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-right: 0;
+  }
+
+  .hero-image-container {
+    justify-self: center;
+  }
+
+  .hero-image-container img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .hero-button-container {
+    grid-area: button;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* optional: restrict width to keep it neat */
+    margin: 2rem auto 0 auto; /* center horizontally */
+    padding: 0 1rem;
 }
 
-/* Additional adjustments for Mobile Phones */
+  .hero-button-container-Link {
+    width: auto;
+    padding: 0.8rem 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .icons-container {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    gap: 10px;
+  }
+}
+
+/* Mobile Phones */
 @media screen and (max-width: 615px) {
-    .header img {
-        width: 80px;
-    }
-    .hero-text-container h1 p {
-        font-size: 32px;
-        text-align: center;
-    }
-    .hero-text-container > p {
-        font-size: 16px;
-        text-align: center;
-    }
-    .hero-button-container-Link {
-        padding: 0.8rem 1rem;
-        font-size: 18px;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .hero-image-container img {
-        width: 100%;
-    }
-}
+  .header img {
+    width: 80px;
+  }
 
-a{
-    color: black;
+  .hero-text-container h1 p {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .hero-text-container > p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .hero-button-container-Link {
+    padding: 0.8rem 1rem;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-image-container img {
+    width: 100%;
+  }
 }
