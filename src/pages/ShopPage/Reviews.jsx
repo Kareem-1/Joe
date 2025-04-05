@@ -49,7 +49,6 @@ export default function Reviews() {
       date: getFormattedDate(),
       confirm: false,
     };
-    console.log(reviewData);
 
     try {
       const response = await fetch("https://joe-sbackend.fly.dev/reviews", {
@@ -147,7 +146,6 @@ export default function Reviews() {
 
       <div className="reviewcards-container">
         {reviews.slice(0, visibleCount).map((reviewItem, index) => {
-          console.log(reviewItem);
           if (reviewItem.confirm == true) {
             return (
               <ReviewCard
