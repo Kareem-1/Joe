@@ -147,6 +147,7 @@ button {
 
 /* Responsive Styles for Tablet and Phones */
 @media screen and (max-width: 768px) {
+
     /* Existing mobile adjustments */
     .hero-container {
         display: grid;
@@ -205,6 +206,7 @@ button {
     }
 
     .icons-container {
+        display: none;
         position: absolute;
         bottom: 0px;   
         left: 0px;     

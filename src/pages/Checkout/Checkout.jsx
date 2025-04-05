@@ -25,7 +25,7 @@ function Checkout() {
   const [paymentUrl, setPaymentUrl] = useState(null);
   const { cartItems } = useCart();
 
-  const fixedItemPrice = 14700; // EGP
+  const fixedItemPrice = 0.1; // EGP
   const quantity = cartItems.reduce((acc, item) => acc + item.orderSize, 0) || 1;
 
   const initiatePaymobPayment = async () => {
